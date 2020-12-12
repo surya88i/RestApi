@@ -10,6 +10,7 @@ class DataSearch extends SearchDelegate {
     return [
       IconButton(
           icon: Icon(Icons.close),
+          color:Colors.black,
           onPressed: () {
             query = '';
           }),
@@ -21,6 +22,7 @@ class DataSearch extends SearchDelegate {
     return IconButton(
         icon: AnimatedIcon(
             icon: AnimatedIcons.menu_arrow, progress: transitionAnimation),
+        color:Colors.black,
         onPressed: () {
           Navigator.pop(context);
         });
@@ -39,11 +41,11 @@ class DataSearch extends SearchDelegate {
               title: RichText(
               text: TextSpan(
                 text: photo.title.substring(0,query.length),
-                style: TextStyle(color: Colors.black),
+                style: TextStyle(color: Colors.grey),
                 children: [
                   TextSpan(
                     text: photo.title.substring(query.length),
-                    style: TextStyle(color: Colors.grey),
+                    style: TextStyle(color: Colors.black),
                   ),
                 ]
               ),
@@ -73,11 +75,11 @@ class DataSearch extends SearchDelegate {
               title: RichText(
               text: TextSpan(
                 text: photo.title.substring(0,query.length),
-                style: TextStyle(color: Colors.black),
+                style: TextStyle(color: Colors.grey),
                 children: [
                   TextSpan(
                     text: photo.title.substring(query.length),
-                    style: TextStyle(color: Colors.grey),
+                    style: TextStyle(color: Colors.black),
                   ),
                 ]
               ),
